@@ -50,25 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /**
-   * Toggle mobile nav dropdowns
-   */
-  const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
-
-  navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
-      if (document.querySelector('.mobile-nav-active')) {
-        event.preventDefault();
-        this.classList.toggle('active');
-        this.nextElementSibling.classList.toggle('dropdown-active');
-
-        let dropDownIndicator = this.querySelector('.dropdown-indicator');
-        dropDownIndicator.classList.toggle('bi-chevron-up');
-        dropDownIndicator.classList.toggle('bi-chevron-down');
-      }
-    })
-  });
-
-  /**
    * Scroll top button
    */
   const scrollTop = document.querySelector('.scroll-top');
@@ -83,13 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     }));
   }
+  
+  // const navfixed = document.querySelector('.header');
+  // if (navfixed) {
+  //   const togglenavfixed = function() {
+  //     window.scrollY > 100 ? navfixed.classList.add('fix') : navfixed.classList.remove('fix');
+  //   }
+  //   document.addEventListener('scroll', togglenavfixed);
+  // }
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
 
   /**
    * Porfolio isotope and filter
@@ -127,6 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   }
+
 
   /**
    * Init swiper slider with 1 slide at once in desktop view
