@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sump2613/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp product.html $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
